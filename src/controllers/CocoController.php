@@ -6,7 +6,10 @@ function cocoAction() {
 
 function testAction() {
     global $smarty;
-    $smarty->display('../resources/default/coco.tpl');
+    global $load;
+    $smarty->assign('foo', '<h1>test action</h1>');
+    // loadTemplate('coco');
+    $load->loadTemplate('coco');
 }
 
 ?>

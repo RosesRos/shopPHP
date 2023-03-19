@@ -7,6 +7,9 @@
     <title>{$smarty.get.action}</title>
 </head>
 <body>
+    <div>
+        {$foo}
+    </div>
     {assign var="tes" value="<span>action test</span>"}
     {$tes}
 </body>

@@ -1,5 +1,7 @@
 <?php
 
+require 'loadTemplate.php';
+
 define('PATH_PREFIX', "../src/controllers/");
 define('PATH_POST_PREFIX', 'Controller.php');
 
@@ -32,9 +34,10 @@ class Smarty_Guest extends Smarty {
         $this->setCompileDir('../public/templates_c');
         $this->setCacheDir('../public/cache');
 
-        $this->assign('templateWebPath', TEMPLATE_POST_FIX);
+        $this->assign('templateWebPath', TEMPLATE_WEB_PATH);
     }
 }
 
-
 $smarty = new Smarty_Guest();
+$load = new LoadTemplate\LoadTemplate();
+
