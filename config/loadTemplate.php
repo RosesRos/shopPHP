@@ -1,9 +1,19 @@
 <?php
 
 namespace LoadTemplate;
+
+/**
+ * interface to all class object
+ * @param // load
+ * 
+ */
+
 interface LoadTemplates {
     public function loadTemplate(string  $data);
 }
+
+
+//> Implement the interface
 
 class LoadTemplate implements LoadTemplates {
     public $templa;
@@ -16,9 +26,12 @@ class LoadTemplate implements LoadTemplates {
         if ($status !== 200) {
             print_r('Error with the server' . ' ' . http_response_code(404));
         } else {
-            $smarty->display(TEMPLATE_PREFIX. "/{$this->templa}".TEMPLATE_POST_FIX);
+            $smarty->display(TEMPLATE_PREFIX . "/{$this->templa}" . TEMPLATE_POST_FIX);
         }
     }
 }
+
+//<
+
 
 ?>

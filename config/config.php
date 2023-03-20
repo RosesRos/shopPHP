@@ -1,6 +1,6 @@
 <?php
 
-require 'loadTemplate.php';
+require 'loadTemplate.php'; // Get the load template function
 
 define('PATH_PREFIX', "../src/controllers/");
 define('PATH_POST_PREFIX', 'Controller.php');
