@@ -13,7 +13,7 @@ define('TEMPLATE_PREFIX', "../resources/{$template}");
 define('TEMPLATE_POST_FIX', '.tpl');
 
 // Path to web template
-define('TEMPLATE_WEB_PATH', '../src/templates/default');
+define('TEMPLATE_WEB_PATH', "templates/{$template}");
 
 /**
  * 

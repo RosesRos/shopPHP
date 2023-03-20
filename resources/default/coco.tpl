@@ -1,16 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{$smarty.get.action}</title>
-</head>
-<body>
-    <div>
-        {$foo}
-    </div>
-    {assign var="tes" value="<span>action test</span>"}
-    {$tes}
-</body>
-</html>
+    {include file="./header.tpl" assign="header"}
+    {$header}
+
+
+    {assign var="tes" value="<span>action {$smarty.get.action}</span>"}
+    <section class="section">
+        <article class="section_article">
+            <div class="section_container">
+                <div class="section_inner">
+                    <h2>{$tes}</h2>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    {include file="./footer.tpl" assign="footer"}
+    {$footer}
