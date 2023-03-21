@@ -5,7 +5,7 @@
     <section class="section">
         <article class="section_article">
                 <div class="section_container">
-                    <div class="section_inner">
+                    <div class="section_inner" id="centerColumn">
                             <h1>center block</h1>
                     </div>
                 </div>
