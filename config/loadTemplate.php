@@ -24,7 +24,7 @@ class LoadTemplate implements LoadTemplates {
         $this->templa = $templa;
         $status = http_response_code();
         if ($status !== 200) {
-            print_r('Error with the server' . ' ' . http_response_code(404));
+            print_r('Error with the server' . ' ' . http_response_code(404) . PHP_EOL);
         } else {
             $smarty->display(TEMPLATE_PREFIX . "/{$this->templa}" . TEMPLATE_POST_FIX);
         }
