@@ -1,5 +1,6 @@
 <?php
 require dirname(__DIR__) . '/config/config.php';
+require dirname(__DIR__) . '/config/db.php';
 require './library/mainFunctions.php'; // Get the main functions
 
 
