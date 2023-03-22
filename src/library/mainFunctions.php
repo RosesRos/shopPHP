@@ -30,7 +30,7 @@ function d($value = null, $die = 1) {
  * @param object $mysqli
  */
 function connBase() {
-    require dirname(__DIR__) . '/../bin/mysqli_database.php';
+    require dirname(__DIR__) . '/../public/modals/mysqli_database.php';
     global $mysqli;
     $query_1 = 'INSERT INTO xxx.xxx (id, parent_id, name)
     VALUES (NULL, "0", "Phones"), 

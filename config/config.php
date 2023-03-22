@@ -5,12 +5,6 @@ require 'loadTemplate.php'; // Get the load template function
 define('PATH_PREFIX', "../src/controllers/");
 define('PATH_POST_PREFIX', 'Controller.php');
 
-//> constants to connect to mysqli
-define('SERVER_NAME', '');
-define('USER_NAME', '');
-define('PASS_NAME', '');
-define('BASE_NAME', '');
-//<
 
 // Use the template
 $template = 'default';
