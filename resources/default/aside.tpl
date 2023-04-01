@@ -1,4 +1,4 @@
-{append var="aside" value=array('item1', 'item2', 'item3') index="left"}
+{append var="aside" value=$rsCategories index="left"}
 <section class="section">
     <article class="section_article">
             <aside class="section_aside" id="leftColumn">
@@ -9,10 +9,18 @@
                 <nav>
                     <ul>
                         {foreach $aside.left as $item}
-                            <li>{$item}</li>
+                            <li><a href="#">{$item['name']}</a></li>
+                            {if isset($item['children'])}
+                                <ul>
+                                    {foreach $item['children'] as $itemChild}
+                                        <li>--<a href="#">{$itemChild['name']}</a></li>
+                                    {/foreach}
+                                </ul>
+                            {/if}
                         {/foreach}
                     </ul>
                 </nav>
+                
             </aside>
     </article>
 </section>

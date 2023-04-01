@@ -1,4 +1,7 @@
 <?php
+
+$mysqli;
+
 /**
  * Modal for table categories
  */
@@ -8,16 +11,42 @@
  * @param object $mysqli
  */
 
-function getAllMainCatsWithChildren() {
-    global $mysqli;
-    $query_1 = 'SELECT * FROM xxx.xxx WHERE parent_id=0';
+ /**
+  * @param int $idCart ID categories
+  */
+ 
+function getChildrenForCart($idCart) {
+    // global $mysqli;
+    $sql_1 = "SELECT * 
+            FROM xxx.xxx 
+            WHERE parent_id = $idCart";
+    // d($sql_1);
+    $result = $GLOBALS['mysqli']->query($sql_1);
+    $createSmartyRsArray = 'createSmartyRsArray';
+    return $createSmartyRsArray($result);
+}
 
-    if ($result = $mysqli->query($query_1)) {
-        while($rows = $result->fetch_field()) {
-            print_r($rows->value);
+
+function getAllMainCatsWithChildren() {
+    // global $mysqli;
+    $sql_2 = 'SELECT * 
+            FROM xxx.xxx
+            WHERE parent_id = 0';
+
+    if ($result = $GLOBALS['mysqli']->query($sql_2)) {
+        $smartyRS = array();
+        while($rows = $result->fetch_assoc()) {
+            // d($rows['id']);
+            $rsChildren = getChildrenForCart($rows['id']);
+            if($rsChildren) {
+                $rows['children'] = $rsChildren;
+            }
+            $smartyRS[] = $rows;
         }
-        return $result->free_result();
+        $result->free_result();
+        // d($smartyRS);
+        return $smartyRS;
     }
 
-    $mysqli->close();
+    $GLOBALS['mysqli']->close();
 }

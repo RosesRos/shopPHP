@@ -24,4 +24,16 @@ function d($value = null, $die = 1) {
 }
 
 
-?>
+/**
+ * @param $result array variables
+ */
+
+function createSmartyRsArray($result) {
+    if (!$result) return false;
+    $smartyRS  = array();
+    while($rows = $result->fetch_assoc()) {
+        $smartyRS[] = $rows;
+    }
+    // d($smartyRS);
+    return $smartyRS;
+}
