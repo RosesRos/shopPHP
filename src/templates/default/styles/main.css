@@ -39,3 +39,11 @@ body{
 .cartBox{
 	padding: 5px 0px 5px 0px;
 }
+
+.c_items {
+	float: left;
+	padding: 0 3rem 4rem 0;
+}
+.c_clear {
+	clear: both;
+}

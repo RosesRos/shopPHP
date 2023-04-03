@@ -18,7 +18,7 @@ $mysqli;
 function getChildrenForCart($idCart) {
     // global $mysqli;
     $sql_1 = "SELECT * 
-            FROM xxx.xxx 
+            FROM myShop.categories
             WHERE parent_id = $idCart";
     // d($sql_1);
     $result = $GLOBALS['mysqli']->query($sql_1);
@@ -30,7 +30,7 @@ function getChildrenForCart($idCart) {
 function getAllMainCatsWithChildren() {
     // global $mysqli;
     $sql_2 = 'SELECT * 
-            FROM xxx.xxx
+            FROM myShop.categories
             WHERE parent_id = 0';
 
     if ($result = $GLOBALS['mysqli']->query($sql_2)) {

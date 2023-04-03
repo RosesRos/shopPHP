@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.47, created on 2023-03-21 16:42:39
+/* Smarty version 3.1.47, created on 2023-04-03 11:10:05
   from '/home/fabio/Desktop/shopPHP/resources/default/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.47',
-  'unifunc' => 'content_6419b44f857a35_42499705',
+  'unifunc' => 'content_642a89dddfd6e1_86778025',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8015a81f673b21c515fab36c5c5ef4cd0a888700' => 
     array (
       0 => '/home/fabio/Desktop/shopPHP/resources/default/index.tpl',
-      1 => 1679406158,
+      1 => 1680509335,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:./footer.tpl' => 1,
   ),
 ),false)) {
-function content_6419b44f857a35_42499705 (Smarty_Internal_Template $_smarty_tpl) {
+function content_642a89dddfd6e1_86778025 (Smarty_Internal_Template $_smarty_tpl) {
 ?>    <?php ob_start();
 $_smarty_tpl->_subTemplateRender("file:./header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->assign('header', ob_get_clean());
@@ -30,12 +30,44 @@ $_smarty_tpl->assign('header', ob_get_clean());
     <?php echo $_smarty_tpl->tpl_vars['header']->value;?>
 
 
+    <?php $_tmp_array = isset($_smarty_tpl->tpl_vars['products']) ? $_smarty_tpl->tpl_vars['products']->value : array();
+if (!(is_array($_tmp_array) || $_tmp_array instanceof ArrayAccess)) {
+settype($_tmp_array, 'array');
+}
+$_tmp_array["center"] = $_smarty_tpl->tpl_vars['rsProducts']->value;
+$_smarty_tpl->_assignInScope('products', $_tmp_array);?>
 
     <section class="section">
         <article class="section_article">
                 <div class="section_container">
                     <div class="section_inner" id="centerColumn">
-                            <h1>center block</h1>
+                            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['products']->value['center'], 'product', false, NULL, 'products', array (
+  'iteration' => true,
+));
+$_smarty_tpl->tpl_vars['product']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['product']->value) {
+$_smarty_tpl->tpl_vars['product']->do_else = false;
+$_smarty_tpl->tpl_vars['__smarty_foreach_products']->value['iteration']++;
+?>
+                                <div class="c_items">
+                                    <a href="/product/<?php echo $_smarty_tpl->tpl_vars['product']->value['id'];?>
+">
+                                        <img src="/img/products/<?php echo $_smarty_tpl->tpl_vars['product']->value['image'];?>
+" alt="<?php echo $_smarty_tpl->tpl_vars['product']->value['name'];?>
+"/>
+                                    </a>
+                                    <br/>
+                                    <a href="/product/<?php echo $_smarty_tpl->tpl_vars['product']->value['id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['product']->value['name'];?>
+</a>
+                                </div>
+                                <?php if ((isset($_smarty_tpl->tpl_vars['__smarty_foreach_products']->value['iteration']) ? $_smarty_tpl->tpl_vars['__smarty_foreach_products']->value['iteration'] : null) % 3 == 0) {?>
+                                    <div class="c_clear"></div>
+                                <?php }?>
+                            <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                     </div>
                 </div>
         </article>
