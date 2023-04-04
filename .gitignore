@@ -1,4 +1,3 @@
-config/config.php
 
 # local env files
 .env.local
@@ -9,3 +8,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+/nbproject/private/
+/config/db.php
