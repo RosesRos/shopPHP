@@ -8,7 +8,7 @@ function loadPage(string $controllerName, $actionName) {
 }
 
 /**
- * Function to debug php codes
+ * Function to debug  codes
  * @param mixed d()
  * 
  */

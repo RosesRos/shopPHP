@@ -3,7 +3,7 @@
 /**
  *  A PHP Framework For Web
  *
- * @package  php
+ * @package  Framework
  * @author   rosstran fabio <rostranfacesar@gmail.com>
  */
 
