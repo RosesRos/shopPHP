@@ -3,6 +3,7 @@
 
     {append var="products" value=$rsProducts index="center"}
 
+
     <section class="section">
         <article class="section_article">
                 <div class="section_container">
