@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.47, created on 2023-04-01 20:18:29
+/* Smarty version 3.1.47, created on 2023-04-04 11:04:56
   from '/home/fabio/Desktop/shopPHP/resources/default/aside.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.47',
-  'unifunc' => 'content_64286765499e43_61296360',
+  'unifunc' => 'content_642bda282630d4_81457960',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6d1eb5a69dfdc3bd70f847603bab1e23888c8a22' => 
     array (
       0 => '/home/fabio/Desktop/shopPHP/resources/default/aside.tpl',
-      1 => 1680345920,
+      1 => 1680595377,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_64286765499e43_61296360 (Smarty_Internal_Template $_smarty_tpl) {
+function content_642bda282630d4_81457960 (Smarty_Internal_Template $_smarty_tpl) {
 $_tmp_array = isset($_smarty_tpl->tpl_vars['aside']) ? $_smarty_tpl->tpl_vars['aside']->value : array();
 if (!(is_array($_tmp_array) || $_tmp_array instanceof ArrayAccess)) {
 settype($_tmp_array, 'array');
@@ -43,7 +43,8 @@ $_smarty_tpl->tpl_vars['item']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
 $_smarty_tpl->tpl_vars['item']->do_else = false;
 ?>
-                            <li><a href="#"><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
+                            <li><a href="/?controller=category&id=<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
 </a></li>
                             <?php if ((isset($_smarty_tpl->tpl_vars['item']->value['children']))) {?>
                                 <ul>
@@ -53,7 +54,8 @@ $_smarty_tpl->tpl_vars['itemChild']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['itemChild']->value) {
 $_smarty_tpl->tpl_vars['itemChild']->do_else = false;
 ?>
-                                        <li>--<a href="#"><?php echo $_smarty_tpl->tpl_vars['itemChild']->value['name'];?>
+                                        <li>--<a href="/?controller=category&id=<?php echo $_smarty_tpl->tpl_vars['itemChild']->value['id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['itemChild']->value['name'];?>
 </a></li>
                                     <?php
 }
