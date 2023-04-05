@@ -24,18 +24,34 @@ function indexAction() {
     $rsCategory = 'getCatById';
     $rsChildCat = 'getChildrenForCart';
     $rsProducts = 'getProductByCat';
-    // $rsCategory($catId);
-
-    if ($rsCategory['parent_id'] == 0) {
-        $rsChildCat($catId);
-    } else {
-        $rsProducts($catId);
-    }
-    // d($rsCategory['name']);
 
     $rsCategories = 'getAllMainCatsWithChildren';
 
-    $smarty->assign('pageTitle', 'product category ' . $rsCategory['name']);
+
+    if (is_array($rsCategory) && isset($rsCategory['parent_id'])) {
+        return $rsCategory['parent_id'];
+        if ($rsCategory['parent_id'] == 0) {
+            $rsChildCat($catId);
+        } else {
+            $rsProducts($catId);
+        }
+
+    }
+
+    $one = null;
+
+    function oneTest($param) {
+        global $rsCategory;
+  
+        if (is_array($rsCategory) && isset($rsCategory['name'])) {
+            $param = $rsCategory['name'];
+            // print_r($param);
+        }
+        return $param;
+    };
+    // d(oneTest($one));
+    
+    $smarty->assign('pageTitle', 'product category ' . oneTest($one));
 
     $smarty->assign('rsCategory', $rsCategory($catId));
     $smarty->assign('rsProducts', $rsProducts($catId));
