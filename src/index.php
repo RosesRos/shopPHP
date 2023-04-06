@@ -1,7 +1,9 @@
 <?php
 require dirname(__DIR__) . '/config/config.php';
 require dirname(__DIR__) . '/config/db.php';
-require './library/mainFunctions.php'; // Get the main functions
+
+// Get the main functions
+require 'library/mainFunctions.php'; 
 
 
 $controllerName = isset($_GET['controller']) ? ucwords(strtolower($_GET['controller'])) : ucwords(strtolower('index'));
