@@ -2,7 +2,7 @@
 
 require 'loadTemplate.php'; // Get the load template function
 
-define('PATH_PREFIX', "../src/controllers/");
+define('PATH_PREFIX', "src/controllers/");
 define('PATH_POST_PREFIX', 'Controller.php');
 
 
@@ -10,11 +10,11 @@ define('PATH_POST_PREFIX', 'Controller.php');
 $template = 'default';
 
 // Path to templates
-define('TEMPLATE_PREFIX', "../resources/{$template}");
+define('TEMPLATE_PREFIX', "resources/{$template}");
 define('TEMPLATE_POST_FIX', '.tpl');
 
 // Path to web template
-define('TEMPLATE_WEB_PATH', "templates/{$template}");
+define('TEMPLATE_WEB_PATH', "src/templates/{$template}");
 
 /**
  * 

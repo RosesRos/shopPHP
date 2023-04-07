@@ -38,9 +38,9 @@ function indexAction() {
 
     }
 
-    $one = null;
+    $nam = null;
 
-    function oneTest($param) {
+    function namRs($param) {
         global $rsCategory;
   
         if (is_array($rsCategory) && isset($rsCategory['name'])) {
@@ -51,7 +51,7 @@ function indexAction() {
     };
     // d(oneTest($one));
     
-    $smarty->assign('pageTitle', 'product category ' . oneTest($one));
+    $smarty->assign('pageTitle', 'product category ' . namRs($namRs));
 
     $smarty->assign('rsCategory', $rsCategory($catId));
     $smarty->assign('rsProducts', $rsProducts($catId));

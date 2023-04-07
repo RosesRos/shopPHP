@@ -4,7 +4,7 @@
  *  A PHP Framework For Web
  *
  * @package  Framework
- * @author   rosstran fabio <rostranfacesar@gmail.com>
+ * @author   rostran fabio <rostranfacesar@gmail.com>
  */
 
 $uri = urldecode(
