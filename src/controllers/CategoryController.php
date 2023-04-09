@@ -26,7 +26,6 @@ function indexAction() {
     $rsProducts = 'getProductByCat';
 
     $rsCategories = 'getAllMainCatsWithChildren';
-//    $rsCategories = 'getAllMainCatsWithChildren';
 
     
 
