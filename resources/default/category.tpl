@@ -2,14 +2,15 @@
     {$header}
 
     {append var="products" value=$rsProducts index="center"}
-    {append var="ChildCat" value=$rsChildCat index="cat"}
+    {append var="ChildCat" value=$rsChildCat index="cat"} 
+
 
     <section class="section">
         <article class="section_article">
                 <div class="section_container">
                     <div class="section_inner" id="centerColumn">
                             <div>
-                                <h1>{$pageTitle}</h1>
+                                <h1>{$rsCategories['name']}</h1>
                             </div>
                             {foreach $products.center as $product  name=products}
                                 <div class="c_items">

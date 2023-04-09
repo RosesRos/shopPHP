@@ -35,23 +35,8 @@ function indexAction() {
         } else {
             $rsProducts($catId);
         }
-
     }
-
-    $nam = null;
-
-    function namRs($param) {
-        global $rsCategory;
-  
-        if (is_array($rsCategory) && isset($rsCategory['name'])) {
-            $param = $rsCategory['name'];
-            // print_r($param);
-        }
-        return $param;
-    };
-    // d(oneTest($one));
     
-    $smarty->assign('pageTitle', 'product category ' . namRs($namRs));
 
     $smarty->assign('rsCategory', $rsCategory($catId));
     $smarty->assign('rsProducts', $rsProducts($catId));
