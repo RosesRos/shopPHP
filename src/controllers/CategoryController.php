@@ -26,6 +26,9 @@ function indexAction() {
     $rsProducts = 'getProductByCat';
 
     $rsCategories = 'getAllMainCatsWithChildren';
+//    $rsCategories = 'getAllMainCatsWithChildren';
+
+    
 
 
     if (is_array($rsCategory) && isset($rsCategory['parent_id'])) {
