@@ -1,5 +1,6 @@
 {
     "require": {
-        "smarty/smarty": "^3"
+        "smarty/smarty": "^3",
+        "vlucas/phpdotenv": "^5.5"
     }
 }
