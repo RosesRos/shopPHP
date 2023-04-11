@@ -16,6 +16,19 @@ define('TEMPLATE_POST_FIX', '.tpl');
 // Path to web template
 define('TEMPLATE_WEB_PATH', "src/templates/{$template}");
 
+
+/** 
+ * @package  phpdotenv library
+ * 
+ * Full path to vluca/phpdotenv
+ */
+
+require dirname(__DIR__) . '/vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable('./');
+$dotenv->load();
+
+
 /**
  * 
  * Set up smarty
