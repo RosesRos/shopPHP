@@ -9,9 +9,7 @@
         <article class="section_article">
                 <div class="section_container">
                     <div class="section_inner" id="centerColumn">
-                            <div>
-                                <h1>{$rsCategories['name']}</h1>
-                            </div>
+                            
                             {foreach $products.center as $product  name=products}
                                 <div class="c_items">
                                     <a href="/product/{$product['id']}">
