@@ -1,7 +1,6 @@
 
 # local env files
 .env
-.env.example
 .htaccess
 
 # Log files
