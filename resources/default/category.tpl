@@ -12,11 +12,11 @@
                             
                             {foreach $products.center as $product  name=products}
                                 <div class="c_items">
-                                    <a href="/product/{$product['id']}">
+                                    <a href="/product{$product['id']}">
                                         <img src="src/img/products/{$product['image']}" alt="{$product['name']}"/>
                                     </a>
                                     <br/>
-                                    <a href="/product/{$product['id']}">{$product['name']}</a>
+                                    <a href="/product{$product['id']}">{$product['name']}</a>
                                 </div>
                                 {if $smarty.foreach.products.iteration mod 3 == 0}
                                     <div class="c_clear"></div>
