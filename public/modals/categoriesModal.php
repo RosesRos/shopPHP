@@ -28,7 +28,7 @@ function getChildrenForCart($idCart) {
 
 function getAllMainCatsWithChildren() {
 
-    $sql_2 = $GLOBALS['line']->findLine(dirname(__DIR__).'/../index.sql', 8);
+    $sql_2 = $GLOBALS['line']->findLine(dirname(__DIR__).'/../index.sql', 7) . 0;
 
     if ($result = $GLOBALS['mysqli']->query($sql_2)) {
         $smartyRS = array();
@@ -56,7 +56,7 @@ function getAllMainCatsWithChildren() {
 
 function getCatById($catId) {
     $catId = intval($catId);
-    $sql_3 = $GLOBALS['line']->findLine(dirname(__DIR__).'/../index.sql', 9) . $catId;
+    $sql_3 = $GLOBALS['line']->findLine(dirname(__DIR__).'/../index.sql', 8) . $catId;
     // d($sql_3);
     $result = $GLOBALS['mysqli']->query($sql_3);
     $result->fetch_assoc();
