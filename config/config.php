@@ -1,6 +1,7 @@
 <?php
 
 require 'loadTemplate.php'; // Get the load template function
+require 'findLine.php'; // Get a line of any files
 
 define('PATH_PREFIX', "src/controllers/");
 define('PATH_POST_PREFIX', 'Controller.php');
@@ -29,6 +30,14 @@ $dotenv = Dotenv\Dotenv::createImmutable('./');
 $dotenv->load();
 
 
+$db = [
+    'db_host' => $_SERVER['DB_HOST'],
+    'db_username' => $_ENV['DB_USERNAME'],
+    'db_password' => $_ENV['DB_PASSWORD'],
+    'db_database' => $_ENV['DB_DATABASE']
+];
+
+
 /**
  * 
  * Set up smarty
@@ -54,4 +63,11 @@ class Smarty_Guest extends Smarty {
 
 $smarty = new Smarty_Guest();
 $load = new LoadTemplate\LoadTemplate();
+
+
+/**
+ * @param class Line
+ */
+
+$line = new Roses\Line\Line();
 

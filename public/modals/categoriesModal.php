@@ -1,6 +1,7 @@
 <?php
 
 $mysqli;
+$line;
 
 /**
  * Modal for table categories
@@ -16,9 +17,9 @@ $mysqli;
   */
  
 function getChildrenForCart($idCart) {
-    // global $mysqli;
-    $sql_1 = "SELECT *  FROM myShop.categories WHERE parent_id = $idCart";
-    // d($sql_1);
+
+    $sql_1 = $GLOBALS['line']->findLine(dirname(__DIR__).'/../index.sql', 7) . $idCart;
+//     d($sql_1);
     $result = $GLOBALS['mysqli']->query($sql_1);
     $createSmartyRsArray = 'createSmartyRsArray';
     return $createSmartyRsArray($result);
@@ -26,8 +27,8 @@ function getChildrenForCart($idCart) {
 
 
 function getAllMainCatsWithChildren() {
-    // global $mysqli;
-    $sql_2 = 'SELECT *  FROM myShop.categories WHERE parent_id = 0';
+
+    $sql_2 = $GLOBALS['line']->findLine(dirname(__DIR__).'/../index.sql', 8);
 
     if ($result = $GLOBALS['mysqli']->query($sql_2)) {
         $smartyRS = array();
@@ -55,7 +56,7 @@ function getAllMainCatsWithChildren() {
 
 function getCatById($catId) {
     $catId = intval($catId);
-    $sql_3 = "SELECT * FROM myShop.categories WHERE id = $catId";
+    $sql_3 = $GLOBALS['line']->findLine(dirname(__DIR__).'/../index.sql', 9) . $catId;
     // d($sql_3);
     $result = $GLOBALS['mysqli']->query($sql_3);
     $result->fetch_assoc();

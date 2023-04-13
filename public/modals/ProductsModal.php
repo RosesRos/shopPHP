@@ -1,6 +1,9 @@
 <?php
 
+
 $mysqli;
+$line;
+
 
 /**
  * modal for table products
@@ -10,12 +13,13 @@ $mysqli;
  */
 
 function getLastProducts($limit = null) {
-    $sql_2 = 'SELECT * FROM myShop.products ORDER BY id DESC';
+    
+    $sql_2 = $GLOBALS['line']->findLine(dirname(__DIR__).'/../index.sql', 5);
     
     if ($limit) {
         $sql_2 .= " LIMIT $limit";
     }
-    // d($sql_2);rsCategories
+//     d($sql_2);
     $rs = $GLOBALS['mysqli']->query($sql_2);
     return createSmartyRsArray($rs);
 }
@@ -27,8 +31,9 @@ function getLastProducts($limit = null) {
 
 function getProductByCat($itemId) {
     $itemId = intval($itemId);
-    $sql_4 = "SELECT * FROM myShop.products WHERE category_id = $itemId";
-    // d($sql_4);
+    
+    $sql_4 = $GLOBALS['line']->findLine(dirname(__DIR__).'/../index.sql', 6) . $itemId;
+//     d($sql_4);
     $rs = $GLOBALS['mysqli']->query($sql_4);
     return createSmartyRsArray($rs);
 }
