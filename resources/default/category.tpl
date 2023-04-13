@@ -2,7 +2,7 @@
     {$header}
 
     {append var="products" value=$rsProducts index="center"}
-    {append var="ChildCat" value=$rsChildCat index="cat"} 
+    {append var="ChildCat" value=$rsChildCat index="cat"}
 
 
     <section class="section">
@@ -27,6 +27,7 @@
                                 {foreach $ChildCat.cat as $child name=ChildCats}
                                     <h1><a href="/category{$child['id']}">{$child['name']}</a></h1>
                                 {/foreach}
+                                
                             </div>
                     </div>
                 </div>
