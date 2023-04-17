@@ -19,7 +19,7 @@ define('TEMPLATE_WEB_PATH', "src/templates/{$template}");
 
 
 /** 
- * @package  phpdotenv library
+ * @package phpdotenv library
  * 
  * Full path to vluca/phpdotenv
  */
