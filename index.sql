@@ -4,8 +4,8 @@
  * Created: Apr 13, 2023
  */
 
-SELECT * FROM myShop.products ORDER BY id DESC
-SELECT * FROM myShop.products WHERE category_id =
-SELECT * FROM myShop.categories WHERE parent_id =
-SELECT * FROM myShop.categories WHERE id =
+SELECT * FROM epiz_33573942_shop.products ORDER BY id DESC
+SELECT * FROM epiz_33573942_shop.products WHERE category_id =
+SELECT * FROM epiz_33573942_shop.categories WHERE parent_id =
+SELECT * FROM epiz_33573942_shop.categories WHERE id =
 
