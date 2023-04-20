@@ -8,6 +8,7 @@
                 </div>
                 <nav>
                     <ul>
+                        <a href="aside.tpl"></a>
                         {foreach $aside.left as $item}
                             <li><a href="/shopPHP/?controller=category&id={$item['id']}">{$item['name']}</a></li>
                             {if isset($item['children'])}
