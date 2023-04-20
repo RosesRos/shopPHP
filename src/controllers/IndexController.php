@@ -1,6 +1,6 @@
 <?php
 // Set up Modal for categories
-require dirname(__DIR__) . '/../public/modals/categoriesModal.php';
+require dirname(__DIR__) . '/../public/modals/CategoriesModal.php';
 require dirname(__DIR__) . '/../public/modals/ProductsModal.php';
 
 function indexAction() {

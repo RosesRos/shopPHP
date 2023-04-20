@@ -9,11 +9,11 @@
                 <nav>
                     <ul>
                         {foreach $aside.left as $item}
-                            <li><a href="/?controller=category&id={$item['id']}">{$item['name']}</a></li>
+                            <li><a href="/shopPHP/?controller=category&id={$item['id']}">{$item['name']}</a></li>
                             {if isset($item['children'])}
                                 <ul>
                                     {foreach $item['children'] as $itemChild}
-                                        <li>--<a href="/?controller=category&id={$itemChild['id']}">{$itemChild['name']}</a></li>
+                                        <li>--<a href="/shopPHP/?controller=category&id={$itemChild['id']}">{$itemChild['name']}</a></li>
                                     {/foreach}
                                 </ul>
                             {/if}
