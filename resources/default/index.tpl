@@ -10,19 +10,13 @@
                     <div class="section_inner" id="centerColumn">
                             {foreach $products.center as $product  name=products}
                                 <div class="c_items">
-<<<<<<< HEAD
+
                                     <a href="/shopPHP/product/{$product['id']}">
                                         <img src="src/img/products/{$product['image']}" alt="{$product['name']}"/>
                                     </a>
                                     <br/>
                                     <a href="/shopPHP/product/{$product['id']}">{$product['name']}</a>
-=======
-                                    <a href="/product/{$product['id']}">
-                                        <img src="src/img/products/{$product['image']}" alt="{$product['name']}"/>
-                                    </a>
-                                    <br/>
-                                    <a href="/product/{$product['id']}">{$product['name']}</a>
->>>>>>> 8fcde4bf7d1584b94c521dc791b3135dc446ceb2
+
                                 </div>
                                 {if $smarty.foreach.products.iteration mod 3 == 0}
                                     <div class="c_clear"></div>
