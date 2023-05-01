@@ -13,7 +13,7 @@
                             {foreach $products.center as $product  name=products}
                                 <div class="c_items">
                                     <a href="/shopPHP/product/{$product['id']}">
-                                        <img src="../src/img/products/{$product['image']}" alt="{$product['name']}"/>
+                                        <img src="src/img/products/{$product['image']}" alt="{$product['name']}"/>
                                     </a>
                                     <br/>
                                     <a href="/shopPHP/product/{$product['id']}">{$product['name']}</a>
