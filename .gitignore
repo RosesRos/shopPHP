@@ -11,3 +11,5 @@ pnpm-debug.log*
 /nbproject/private/
 /config/db.php
 /vendor
+
+/public/templates_c
