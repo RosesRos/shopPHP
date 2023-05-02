@@ -59,6 +59,6 @@ function getCatById($catId) {
     $sql_3 = $GLOBALS['line']->findLine(dirname(__DIR__).'/../index.sql', 9) . $catId;
 //     d($sql_3);
     $result = $GLOBALS['mysqli']->query($sql_3);
-    $result->fetch_assoc();
+    $result->fetch_array(MYSQLI_ASSOC);
     return $result->free_result();
 }

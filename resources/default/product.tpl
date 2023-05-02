@@ -25,13 +25,13 @@
                 <div class="section_container">
                     <div class="section_inner" id="centerColumn">
                         <h3 id="jg_photo_title" class="jg_imgtitle">
-                            {$products.center}
+                            {$products.center['price']}
                         </h3>
                         
 {*                         <img  width="575" id="jg_photo_big" class="jg_photo" src="/shopPHP/img/products/{$product['image']}"> *}
                           
                         <div>
-{*                            Price: {$product['price']}*}
+                            Price: {$products.center['price']}
 {*                            <a id="removeCart_{$product['id']}" {if ! $itemInCart}class="hideme"{/if} href="#" onClick="removeFromCart({$rsProduct['id']}); return false;" alt="Удалить из корзины">Удалить из корзины</a>*}
 {*                            <a id="addCart_{$product['id']}" {if $itemInCart}class="hideme"{/if} href="#" onClick="addToCart({$rsProduct['id']}); return false;" alt="Добавить в корзину">Добавить в корзину</a> *}
     
