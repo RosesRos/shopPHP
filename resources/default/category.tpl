@@ -1,5 +1,22 @@
     {include file="./header.tpl" assign="header"}
     {$header}
+    
+    <link type="text/css" rel="stylesheet" href="{$templateWebPath}/styles/main.css"/>
+</head>
+<body>
+    {append var="name" value="<h1 class='red'>My Shop - online shop</h1>" index="last"}
+    <header class="header">
+        <article class="header_article">
+            <div class="header_container">
+                <div class="header_header" id="header">
+                    {$name.last}
+                </div>
+            </div>
+        </article>
+    </header>
+
+    {include file="./aside.tpl" assign="aside"}
+    {$aside}
 
     {append var="products" value=$rsProducts index="center"}
     {append var="ChildCat" value=$rsChildCat index="cat"}
@@ -13,7 +30,7 @@
                             {foreach $products.center as $product  name=products}
                                 <div class="c_items">
                                     <a href="/shopPHP/product/{$product['id']}">
-                                        <img src="src/img/products/{$product['image']}" alt="{$product['name']}"/>
+                                        <img src="/shopPHP/src/img/products/{$product['image']}" alt="{$product['name']}"/>
                                     </a>
                                     <br/>
                                     <a href="/shopPHP/product/{$product['id']}">{$product['name']}</a>

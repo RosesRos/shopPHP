@@ -57,7 +57,7 @@ function getAllMainCatsWithChildren() {
 function getCatById($catId) {
     $catId = intval($catId);
     $sql_3 = $GLOBALS['line']->findLine(dirname(__DIR__).'/../index.sql', 9) . $catId;
-    // d($sql_3);
+//     d($sql_3);
     $result = $GLOBALS['mysqli']->query($sql_3);
     $result->fetch_assoc();
     return $result->free_result();
