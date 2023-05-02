@@ -31,7 +31,7 @@ function d($value = null, $die = 1) {
 function createSmartyRsArray($result) {
     if (!$result) return false;
     $smartyRS  = array();
-    while($rows = $result->fetch_assoc()) {
+    while($rows = $result->fetch_array(MYSQLI_ASSOC)) {
         $smartyRS[] = $rows;
     }
     // d($smartyRS);

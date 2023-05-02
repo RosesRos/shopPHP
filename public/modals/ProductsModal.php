@@ -44,13 +44,13 @@ function getProductByCat($itemId) {
  * Get data of products by ID 
  * 
  * @param integer $itemId ID product
- * @return array data of products 
+ * 
  */
 function getProductById($itemId) {
    $itemId = intval($itemId);
+   
    $sql_5 = $GLOBALS['line']->findLine(dirname(__DIR__).'/../index.sql', 10) . $itemId;
-//   d($sql_5);
    $result = $GLOBALS['mysqli']->query($sql_5);
-   $result->fetch_assoc();
-   return $result->free_result();
+
+   return createSmartyRsArray($result);
 }

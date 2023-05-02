@@ -20,6 +20,7 @@ require dirname(__DIR__) . '/../public/modals/ProductsModal.php';
  * Format page
  * 
  * @param object $smarty template 
+ * 
  */
 function indexAction(){ 
     global $load;
@@ -28,21 +29,18 @@ function indexAction(){
     $itemId = isset($_GET['id']) ? $_GET['id'] : null; 
     if($itemId == null) exit();
 
-	 // get Product's Data
-    $rsProduct = 'getProductById';
+    $rsProd = 'getProductById';
+//    d($rsProd);
 	 
-	 //  get all categories 
     $rsCategories = 'getAllMainCatsWithChildren';
 
-    $smarty->assign('itemInCart', 0);
-    if(in_array($itemId, $_SESSION['cart'])){
-        $smarty->assign('itemInCart', 1);
-    }
+//    $smarty->assign('itemInCart', 0);
+//    if(in_array($itemId, $_SESSION['cart'])){
+//        $smarty->assign('itemInCart', 1);
+//    }
      
-//    $smarty->assign('pageTitle', '');
-    $smarty->assign('rsProduct', $rsProduct($itemId));
     $smarty->assign('rsCategories', $rsCategories());
-    $smarty->assign('coco', 'coco test');
+    $smarty->assign('rsProd', $rsProd($itemId));
 
     $load->loadTemplate('product');
 }
