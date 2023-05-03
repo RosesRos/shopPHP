@@ -19,7 +19,6 @@ function getLastProducts($limit = null) {
     if ($limit) {
         $sql_2 .= " LIMIT $limit";
     }
-//     d($sql_2);
     $rs = $GLOBALS['mysqli']->query($sql_2);
     return createSmartyRsArray($rs);
 }
@@ -33,7 +32,6 @@ function getProductByCat($itemId) {
     $itemId = intval($itemId);
     
     $sql_4 = $GLOBALS['line']->findLine(dirname(__DIR__).'/../index.sql', 6) . $itemId;
-//     d($sql_4);
     $rs = $GLOBALS['mysqli']->query($sql_4);
     return createSmartyRsArray($rs);
 }

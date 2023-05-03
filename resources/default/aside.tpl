@@ -10,17 +10,23 @@
                     <ul>
                         <a href="aside.tpl"></a>
                         {foreach $aside.left as $item}
-                            <li><a href="/shopPHP/?controller=category&id={$item['id']}">{$item['name']}</a></li>
+                            <li><a href="/shopPHP/category/{$item['id']}">{$item['name']}</a></li>
                             {if isset($item['children'])}
                                 <ul>
                                     {foreach $item['children'] as $itemChild}
-                                        <li>--<a href="/shopPHP/?controller=category&id={$itemChild['id']}">{$itemChild['name']}</a></li>
+                                        <li>--<a href="/shopPHP/category/{$itemChild['id']}">{$itemChild['name']}</a></li>
                                     {/foreach}
                                 </ul>
                             {/if}
                         {/foreach}
                     </ul>
                 </nav>
+                    
+                <div class="menuCaption">Cart</div>
+                <a href="/cart/" title="To Cart">To Cart</a>
+                <span id="cartCntItems">
+                    {if $cartCntItems > 0}{$cartCntItems}{else}{/if}
+                </span>
                 
             </aside>
     </article>

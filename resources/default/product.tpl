@@ -46,6 +46,9 @@
         </article>
     </section>
 
+    <script type="text/javascript" src="/shopPHP/src/js/jquery.min.js"></script>                
+    <script type="text/javascript" src="/shopPHP/src/js/main.js"></script>                
+                        
     {include file="./footer.tpl" assign="footer"}
     {$footer}
 

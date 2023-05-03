@@ -2,6 +2,7 @@
     {$header}
     
     <link type="text/css" rel="stylesheet" href="{$templateWebPath}/styles/main.css"/>
+
 </head>
 <body>
     {append var="name" value="<h1 class='red'>My Shop - online shop</h1>" index="last"}
