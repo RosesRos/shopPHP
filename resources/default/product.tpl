@@ -28,12 +28,16 @@
                             {$products.center['name']}
                         </h3>
                         
-                         <img  width="575" id="jg_photo_big" class="jg_photo" src="/shopPHP/src/img/products/{$products.center['image']}"> 
+                        <div>
+                            <img  width="575" id="jg_photo_big" class="jg_photo" src="/shopPHP/src/img/products/{$products.center['image']}">
+                        </div> 
                           
                         <div>
                             Price: {$products.center['price']}
-                            <a id="removeCart_{$products.center['id']}" {if ! $itemInCart}class="hideme"{/if} href="#" onClick="removeFromCart({$products.center['id']}); return false;" alt="Remove from cart">Remove from cart</a>
-                            <a id="addCart_{$products.center['id']}" {if $itemInCart}class="hideme"{/if} href="#" onClick="addToCart({$products.center['id']}); return false;" alt="Add to cart">Add to cart</a> 
+                            <div>
+                                <a id="removeCart_{$products.center['id']}" {if ! $itemInCart}class="hideme"{/if} href="#" onClick="removeFromCart({$products.center['id']}); return false;" alt="Remove from cart">Remove from cart</a>
+                                <a id="addCart_{$products.center['id']}" {if $itemInCart}class="hideme"{/if} href="#" onClick="addToCart({$products.center['id']}); return false;" alt="Add to cart">Add to cart</a>
+                            </div> 
     
                             <p> Description: <br />{$products.center['description']}</p>
                         </div>                        
