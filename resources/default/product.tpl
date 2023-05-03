@@ -25,17 +25,17 @@
                 <div class="section_container">
                     <div class="section_inner" id="centerColumn">
                         <h3 id="jg_photo_title" class="jg_imgtitle">
-                            {$products.center['price']}
+                            {$products.center['name']}
                         </h3>
                         
-{*                         <img  width="575" id="jg_photo_big" class="jg_photo" src="/shopPHP/img/products/{$product['image']}"> *}
+                         <img  width="575" id="jg_photo_big" class="jg_photo" src="/shopPHP/src/img/products/{$products.center['image']}"> 
                           
                         <div>
                             Price: {$products.center['price']}
-{*                            <a id="removeCart_{$product['id']}" {if ! $itemInCart}class="hideme"{/if} href="#" onClick="removeFromCart({$rsProduct['id']}); return false;" alt="Удалить из корзины">Удалить из корзины</a>*}
-{*                            <a id="addCart_{$product['id']}" {if $itemInCart}class="hideme"{/if} href="#" onClick="addToCart({$rsProduct['id']}); return false;" alt="Добавить в корзину">Добавить в корзину</a> *}
+                            <a id="removeCart_{$products.center['id']}" {if ! $itemInCart}class="hideme"{/if} href="#" onClick="removeFromCart({$products.center['id']}); return false;" alt="Remove from cart">Remove from cart</a>
+                            <a id="addCart_{$products.center['id']}" {if $itemInCart}class="hideme"{/if} href="#" onClick="addToCart({$products.center['id']}); return false;" alt="Add to cart">Add to cart</a> 
     
-{*                            <p> Description: <br />{$product['description']}</p>*}
+                            <p> Description: <br />{$products.center['description']}</p>
                         </div>                        
                     </div>
                 </div>

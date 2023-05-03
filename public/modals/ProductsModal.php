@@ -52,5 +52,5 @@ function getProductById($itemId) {
    $sql_5 = $GLOBALS['line']->findLine(dirname(__DIR__).'/../index.sql', 10) . $itemId;
    $result = $GLOBALS['mysqli']->query($sql_5);
 
-   return createSmartyRsArray($result);
+   return $result->fetch_assoc();
 }
