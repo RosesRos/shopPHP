@@ -10,7 +10,7 @@ function addToCart(itemId){
     $.ajax({
 	type: 'POST',
 	async: false,
-	url: "/cart/addtocart/" + itemId + '/',
+	url: "/shopPHP/cart/addtocart/" + itemId + '/',
         headers: {
             'Access-Control-Allow-Origin': '*',
             'Content-Type':'application/json'

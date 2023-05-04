@@ -23,7 +23,7 @@
                 </nav>
                     
                 <div class="menuCaption">Cart</div>
-                <a href="/cart/" title="To Cart">To Cart</a>
+                <a href="/shoPHP/cart/" title="To Cart">To Cart</a>
                 <span id="cartCntItems">
                     {if $cartCntItems > 0}{$cartCntItems}{else}{/if}
                 </span>
