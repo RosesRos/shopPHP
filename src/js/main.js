@@ -31,22 +31,22 @@ function addToCart(itemId){
 function removeFromCart(itemId){
     console.log("js - removeFromCart("+itemId+")");
     $.ajax({
-		type: 'POST',
-		async: false,
-		url: "/shopPHP/cart/removefromcart/" + itemId + '/',
-                headers: {
-                    'Access-Control-Allow-Origin': '*',
-                    'Content-Type':'application/json'
-                },
-		dataType: 'json',
-		success: function(data){
-			if(data['success']){
+	type: 'POST',
+	async: false,
+	url: "/shopPHP/cart/removefromcart/" + itemId + '/',
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Content-Type':'application/json'
+        },
+        dataType: 'json',
+	success: function(data){
+            if(data['success']){
                 
                 $('#cartCntItems').html(data['cntItems']);
                 
                 $('#addCart_'+ itemId).show();
                 $('#removeCart_'+ itemId).hide();
-			}
-		}
-	});    
+            }
+	}
+    });    
 }
