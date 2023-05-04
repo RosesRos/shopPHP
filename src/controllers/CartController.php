@@ -32,3 +32,27 @@ function addtocartAction(){
 
     echo json_encode($resData);
 }
+
+
+/**
+   * Remove product from cart
+   * 
+   * @param integer id GET parametr - ID removed from cart
+   * @return json information about success 
+   */
+ function removefromcartAction(){
+    $itemId = isset($_GET['id']) ? intval($_GET['id']) : null; 
+    if(! $itemId) exit();
+     
+    $resData = array();
+    $key = array_search($itemId, $_SESSION['cart']);
+    if($key !== false){
+        unset($_SESSION['cart'][$key]);
+        $resData['success'] = 1;
+         $resData['cntItems'] = count($_SESSION['cart']);
+    } else {
+        $resData['success'] = 0;
+    }
+     
+    echo json_encode($resData);
+ }
